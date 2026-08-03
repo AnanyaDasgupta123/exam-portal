@@ -9,9 +9,82 @@
 </head>
 <body>
     <div class="m-4">
-    <%- include('student_navbar',{ username:uname}) %>
-    
-
+    <%- include('student_navbar') %>
     </div>
+     <div class="container mt-4">
+        <h2>Student Dashboard</h2>
+        <p class="text-muted">
+           👋 Welcome, <strong><%= uname %></strong>
+        </p>
+        <hr>
+        <div class="row text-center">
+
+    <div class="col-md-4 mb-3">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5>📚 Available Exams</h5>
+                <h2><%= availableExams %></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5>✅ Completed Exams</h5>
+                <h2><%= completedExams %></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5>📝 Total Attempts</h5>
+                <h2><%= totalAttempts %></h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card mt-4 shadow-sm">
+    <div class="card-header">
+       📋 Recent Activity
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Exam</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% recentAttempts.forEach(function(item){ %>
+                <tr>
+                    <td><%= item.cname %></td>
+                    <td><%= item.end_time %></td>
+                    <td><%= item.status %></td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="card mt-4 mb-5 shadow-sm">
+    <div class="card-header">
+       ℹ️ Examination Instructions
+    </div>
+    <div class="card-body">
+        <ul>
+            <li>Ensure you have a stable internet connection.</li>
+            <li>The timer starts immediately after beginning the exam.</li>
+            <li>Refreshing the page will resume your ongoing attempt.</li>
+            <li>Your exam will be submitted automatically when time expires.</li>
+            <li>Results can be viewed after submission.</li>
+        </ul>
+    </div>
+</div>
 </body>
 </html>

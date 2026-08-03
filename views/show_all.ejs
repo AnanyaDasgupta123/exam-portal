@@ -11,36 +11,62 @@
 <body>
 <div class="m-4">
     <%- include('admin_navbar') %>
-    <br>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Serial No</th>
-            <th>Question</th>
-            <th>Option1</th>
-            <th>Option2</th>
-            <th>Option3</th>
-            <th>Option4</th>
-            <th>Correct Ans</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <% 
-                let i=1;
-            data.forEach((e)=>{
-             %>
-            <td><%=i++%></td>
-            <td><%=e.question%></td>
-            <td><%=e.op1%></td>
-            <td><%=e.op2%></td>
-            <td><%=e.op3%></td>
-            <td><%=e.op4%></td>
-            <td><%=e.ca%></td>
-        </tr>  
-         <% 
-    }) 
-    %>  
-
-    </tbody>
-</table>
+    <div class="container mt-5 mb-5">
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="fw-bold mb-1">
+                        📚 Question Bank
+                    </h2>
+                    <p class="text-muted mb-0">
+                        View all questions available in the examination portal.
+                    </p>
+                </div>
+                <span class="badge bg-primary fs-6">
+                    Total Questions: <%= data.length %>
+                </span>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>#</th>
+                            <th>Question</th>
+                            <th>Option A</th>
+                            <th>Option B</th>
+                            <th>Option C</th>
+                            <th>Option D</th>
+                            <th>Answer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%
+                        let i = 1;
+                        data.forEach((e)=>{ %>
+                        <tr>
+                            <td>
+                                <span class="badge bg-secondary">
+                                    <%= i++ %>
+                                </span>
+                            </td>
+                            <td class="fw-semibold">
+                                <%= e.question %>
+                            </td>
+                            <td><%= e.op1 %></td>
+                            <td><%= e.op2 %></td>
+                            <td><%= e.op3 %></td>
+                            <td><%= e.op4 %></td>
+                            <td>
+                                <span class="badge bg-success">
+                                    <%= e.ca.toUpperCase() %>
+                                </span>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

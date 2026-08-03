@@ -10,8 +10,79 @@
 <body>
     <div class="m-4">
     <%- include('admin_navbar') %>
-    
+    </div>
+   <div class="container mt-4">
+    <div class="p-5 mb-4 bg-light rounded-3 border shadow-sm">
+        <div class="container-fluid py-3">
+            <h2 class="display-5 fw-bold">
+                Welcome, Administrator 👋
+            </h2>
+            <p class="fs-5 text-muted mt-3">
+                Manage categories, question banks, and examination data from one centralized dashboard.
+                Use the quick actions below to efficiently maintain your Online Examination Portal.
+            </p>
+            <hr>
+            <p class="mb-0">
+                <strong>Today:</strong>
+                <%= new Date().toLocaleDateString() %>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="row mt-4">
+
+    <div class="col-md-3">
+        <div class="card text-center shadow">
+            <div class="card-body">
+                <h5>Total Categories</h5>
+                <h2><%= totalCategory %></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center shadow">
+            <div class="card-body">
+                <h5>Total Questions</h5>
+                <h2><%= totalQuestions %></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center shadow">
+            <div class="card-body">
+                <h5>Total Students</h5>
+                <h2><%= totalStudents %></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card text-center shadow">
+            <div class="card-body">
+                <h5>Total Attempts</h5>
+                <h2><%= totalAttempts %></h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card mt-5">
+
+    <div class="card-header">
+       🛡️ System Information
+    </div>
+
+    <div class="card-body">
+
+        <p><strong>Database:</strong> Connected</p>
+
+        <p><strong>Portal:</strong> Online Examination System</p>
+
+        <p><strong>Administrator:</strong> Logged In</p>
 
     </div>
+
+</div>
 </body>
 </html>
