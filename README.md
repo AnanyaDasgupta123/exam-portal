@@ -6,30 +6,33 @@ This project was developed as part of my backend and full-stack development lear
 
 🚀 Features
 
-👨‍💼 Admin Module
-Secure admin login
-Dashboard with exam statistics
-Create, update, and delete exam categories
-Add, edit, and remove questions
-View total students, exams, and attempts
+👨‍💼 Admin Module::
+Secure admin login.
+Dashboard with exam statistics.
+Create, update, and delete exam categories.
+Add, edit, and remove questions.
+View total students, exams, and attempts.
 
-👨‍🎓 Student Module
-Student registration and login
-Browse available examinations
-Timed online examinations
-Automatic submission when the timer expires
-Resume an unfinished exam
-View detailed results after submission
-Previous answers remain visible when resuming an attempt
+👨‍🎓 Student Module::
 
-⚙️ System Features
-Automatic answer evaluation
-Instant score calculation
-MySQL database integration
-Email notifications using Nodemailer
-Server-side validation for exam duration
-Responsive user interface using Bootstrap
-🛠 Tech Stack
+Student registration and login.
+Browse available examinations.
+Timed online examinations.
+Automatic submission when the timer expires.
+Resume an unfinished exam.
+View detailed results after submission.
+Previous answers remain visible when resuming an attempt.
+
+⚙️ System Features::
+
+Automatic answer evaluation.
+Instant score calculation.
+MySQL database integration.
+Email notifications using Nodemailer.
+Server-side validation for exam duration.
+Responsive user interface using Bootstrap.
+
+🛠 Tech Stack::
 
 Backend: Node.js, Express.js
 
@@ -39,11 +42,11 @@ Database: MySQL
 
 Other Tools: Nodemailer Git & GitHub
 
-📂 Installation & Setup
+📂 Installation & Setup::
 1. Clone the repository
 git clone https://github.com/AnanyaDasgupta123/exam-portal.git
 2. Navigate to the project directory
-cd exam-portal
+cd Exam
 3. Install dependencies
 npm install
 4. Configure environment variables
@@ -60,9 +63,7 @@ EMAIL_PASS=your_email_password
 
 5. Start the application
 nodemon
-
 If Nodemon is not installed globally:
-
 npx nodemon
 6. Open the application
 
